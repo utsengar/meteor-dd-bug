@@ -1,0 +1,22 @@
+<head>
+  <title>Testing select dropdown in handlebars/meteor</title>
+</head>
+
+<body>
+  {{> hello}} <br>
+  {{> select}} <- The default "selected" value is based on the value returned from Template.select.val from test.js
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+</template>
+
+
+<template name="select">
+	<select id="select_id">
+	  <option{{selected val "Yay"}}>Yay</option>
+	  <option{{selected val "Nay"}}>Nay</option>
+	  <option{{selected val "File not found"}}>File not found</option>	  
+  	</select>
+</template>
